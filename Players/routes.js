@@ -17,7 +17,7 @@ function playerRoutes(app) {
         const player = await dao.findPlayerByName(req.params.name);
         res.json(player);
     }
-    
+
     const findPlayerById = async (req, res) => {
         const player = await dao.findPlayerById(req.params.id);
         res.json(player);

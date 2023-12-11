@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
-const playersSchema = new mongoose.Schema({
-                                           name: {type: String, required: true},
+const playersSchema = new mongoose.Schema( {
                                            id: {type: String, required: true },
+                                           name: {type: String, required: true},
                                            ranking: String,
                                        },
                                        {collection: "players"})
