@@ -5,8 +5,9 @@ import mongoose from "mongoose";
 import playerRoutes from "./Players/routes.js"
 import UserRoutes from "./Users/routes.js";
 
-const CONNECTION_STRING = "mongodb"
-mongoose.connect(CONNECTION_STRING);const app = express();
+const CONNECTION_STRING = "mongodb+srv://maliawanderer:PokeMonroCks@roundnet.eq47vv5.mongodb.net/?retryWrites=true&w=majority"
+mongoose.connect(CONNECTION_STRING);
+const app = express();
 const db = mongoose.connection;
 console.log(db);
 app.use(cors());
