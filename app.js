@@ -3,7 +3,7 @@ import "dotenv/config";
 import cors from "cors";
 import mongoose from "mongoose";
 import playerRoutes from "./Players/routes.js"
-import UserRoutes from "./Users/routes"
+import UserRoutes from "./Users/routes.js";
 
 const CONNECTION_STRING = "mongodb"
 mongoose.connect(CONNECTION_STRING);const app = express();
