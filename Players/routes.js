@@ -1,4 +1,4 @@
-import * as dao from "dao.js"
+import * as dao from "./dao.js"
 
 function playerRoutes(app) {
     const createPlayer = async (req, res) => {
