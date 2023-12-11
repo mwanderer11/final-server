@@ -27,10 +27,10 @@ function playerRoutes(app) {
         const status = await dao.updatePlayer(playerId, req.body);
         res.json(status);
     }
-    app.post("/api/players", createPlayer());
-    app.get("/api/players", findAllPlayers());
-    app.get("/api/players/:playerId", findPlayerById());
+    app.post("/api/players", createPlayer);
+    app.get("/api/players", findAllPlayers);
+    app.get("/api/players/:playerId", findPlayerById);
     app.put("/api/player/:playerId", updatePlayer);
-    app.delete("/api/players/:playerId", deletePlayer());
-    app.get("/api/players/:playerName", findPlayerByName());
+    app.delete("/api/players/:playerId", deletePlayer);
+    app.get("/api/players/:playerName", findPlayerByName);
 } export default playerRoutes;
