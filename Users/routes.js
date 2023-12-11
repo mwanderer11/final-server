@@ -1,4 +1,4 @@
-import * as dao from "./dao.js";
+import * as dao from "dao.js"
 
 function UserRoutes(app) {
     const createUser = async (req, res) => {
