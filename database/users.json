@@ -1,0 +1,92 @@
+[
+  {
+    "_id": "121",
+    "username": "maliawanderer",
+    "password": "malia123",
+    "firstName": "Malia",
+    "lastName": "Wanderer",
+    "email": "maliawanderer@gmail.com",
+    "dob": "2002-11-11",
+    "role": "ADMIN"
+  },
+  {
+    "_id": "122",
+    "username": "ctipton",
+    "password": "charlie11",
+    "firstName": "Charles",
+    "lastName": "Tipton",
+    "email": "charles@northeastern.com",
+    "dob": "2001-09-05",
+    "role": "MEMBER"
+  },
+  {
+    "_id": "123",
+    "username": "samuel",
+    "password": "dummist",
+    "firstName": "Sam",
+    "lastName": "Diani",
+    "email": "sam@dummist.com",
+    "dob": "2003-04-30",
+    "role": "MEMBER"
+  },
+  {
+    "_id": "124",
+    "username": "black_widow",
+    "password": "romanoff123",
+    "firstName": "Natasha",
+    "lastName": "Romanoff",
+    "email": "natasha@avengers.com",
+    "dob": "1984-11-22",
+    "role": "MEMBER"
+  },
+  {
+    "_id": "125",
+    "username": "thor_odinson",
+    "password": "mjolnir123",
+    "firstName": "Thor",
+    "lastName": "Odinson",
+    "email": "thor@asgard.com",
+    "dob": "982-05-25",
+    "role": "MEMBER"
+  },
+  {
+    "_id": "126",
+    "username": "hulk_smash",
+    "password": "banner123",
+    "firstName": "Bruce",
+    "lastName": "Banner",
+    "email": "bruce@avengers.com",
+    "dob": "1969-12-18",
+    "role": "MEMBER"
+  },
+  {
+    "_id": "127",
+    "username": "ring_bearer",
+    "password": "shire123",
+    "firstName": "Frodo",
+    "lastName": "Baggins",
+    "email": "frodo@shire.com",
+    "dob": "1368-09-22",
+    "role": "MEMBER"
+  },
+  {
+    "_id": "128",
+    "username": "sunnygu",
+    "password": "imtoxic",
+    "firstName": "Sunny",
+    "lastName": "Gu",
+    "email": "sunny@toxic.com",
+    "dob": "2931-03-01",
+    "role": "COACH"
+  },
+  {
+    "_id": "129",
+    "username": "elf_archer",
+    "password": "legolas123",
+    "firstName": "Legolas",
+    "lastName": "Greenleaf",
+    "email": "legolas@mirkwood.com",
+    "dob": "2879-07-15",
+    "role": "MEMBER"
+  }
+]
