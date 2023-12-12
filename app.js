@@ -1,6 +1,8 @@
 import express from 'express'
 import "dotenv/config";
 import cors from "cors";
+import session from "express-session"
+import "dotenv/config";
 import mongoose from "mongoose";
 import playerRoutes from "./Players/routes.js"
 import UserRoutes from "./Users/routes.js";
@@ -11,7 +13,20 @@ mongoose.connect(CONNECTION_STRING);
 const app = express();
 const db = mongoose.connection;
 console.log(db);
-app.use(cors());
+app.use(cors({credentials: true, origin: process.env.FRONTEND_URL}));
+const sessionOptions = {
+    secret: "any string",
+    resave: false,
+    saveUninitialized: false,
+};
+if (process.env.NODE_ENV !== "development") {
+    sessionOptions.proxy = true;
+    sessionOptions.cookie = {
+        sameSite: "none",
+        secure: true,
+    };
+}
+app.use(session(sessionOptions));
 app.use(express.json());
 playerRoutes(app);
 UserRoutes(app);
