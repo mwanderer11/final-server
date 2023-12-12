@@ -1,0 +1,34 @@
+import * as dao from "./dao.js"
+
+function matchRoutes(app) {
+    const createMatch = async (req, res) => {
+        const user = await dao.createMatch(req.body);
+        res.json(user);
+    }
+    const deleteMatch = async (req, res) => {
+        const status = await dao.deleteMatch(req.params.playerId);
+        res.json(status);
+    }
+    const findAllMatches = async (req, res) => {
+        const players = await dao.findAllMatches();
+        res.json(players);
+    }
+    const findMatchById = async (req, res) => {
+        const player = await dao.findMatchById(req.params.id);
+        res.json(player);
+    }
+    const updateMatch = async (req, res) => {
+        const {playerId} = req.params;
+        const status = await dao.updateMatch(playerId, req.body);
+        res.json(status);
+    }
+    const generateMatches = async (req, res) => {
+
+    }
+    app.post("/api/match", createMatch);
+    app.get("/api/matches", findAllMatches);
+    app.get("/api/matches/:matchId", findMatchById);
+    app.put("/api/matches/:matchId", updateMatch);
+    app.delete("/api/matches/:matchId", deleteMatch);
+    app.put("/api/matches", generateMatches);
+} export default matchRoutes;
