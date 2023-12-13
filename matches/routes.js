@@ -6,7 +6,7 @@ function matchRoutes(app) {
         res.json(user);
     }
     const deleteMatch = async (req, res) => {
-        const status = await dao.deleteMatch(req.params.playerId);
+        const status = await dao.deleteMatch(req.params.matchId);
         res.json(status);
     }
     const findAllMatches = async (req, res) => {
@@ -14,12 +14,12 @@ function matchRoutes(app) {
         res.json(players);
     }
     const findMatchById = async (req, res) => {
-        const player = await dao.findMatchById(req.params.id);
+        const player = await dao.findMatchById(req.params.matchId);
         res.json(player);
     }
     const updateMatch = async (req, res) => {
-        const {playerId} = req.params;
-        const status = await dao.updateMatch(playerId, req.body);
+        const {matchId} = req.params;
+        const status = await dao.updateMatch( matchId, req.body);
         res.json(status);
     }
     const generateMatches = async (req, res) => {

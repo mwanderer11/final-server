@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 const playersSchema = new mongoose.Schema( {
-                                           id: {type: String, required: true },
+                                           _id: {type: String, required: true },
                                            name: {type: String, required: true},
                                            ranking: String,
                                        },

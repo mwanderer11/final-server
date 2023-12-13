@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 const matchesSchema = new mongoose.Schema({
-                                        id: {type: String, required: true},
+                                        _id: {type: String, required: true},
                                         date: {type: Date, required: true},
                                         player1: {type: String, required: true},
                                         player2: {type: String, required: true},
