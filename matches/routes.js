@@ -14,7 +14,7 @@ function matchRoutes(app) {
         res.json(matches);
     }
     const findMatchById = async (req, res) => {
-        const match = await dao.findMatchById(req.params.id);
+        const match = await dao.findMatchById(req.params.matchId);
         res.json(match);
     }
     const updateMatch = async (req, res) => {
@@ -22,12 +22,10 @@ function matchRoutes(app) {
         const status = await dao.updateMatch( matchId, req.body);
         res.json(status);
     }
-    const generateMatches = async (req, res) => {
 
-    }
     app.post("/api/match", createMatch);
     app.get("/api/matches", findAllMatches);
-    app.get("/api/matches/:id", findMatchById);
+    app.get("/api/matches/:matchId", findMatchById);
     app.put("/api/matches/:matchId", updateMatch);
     app.delete("/api/matches/:matchId", deleteMatch);
     app.put("/api/matches", generateMatches);
