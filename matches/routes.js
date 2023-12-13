@@ -10,12 +10,12 @@ function matchRoutes(app) {
         res.json(status);
     }
     const findAllMatches = async (req, res) => {
-        const players = await dao.findAllMatches();
-        res.json(players);
+        const matches = await dao.findAllMatches();
+        res.json(matches);
     }
     const findMatchById = async (req, res) => {
-        const player = await dao.findMatchById(req.params.matchId);
-        res.json(player);
+        const match = await dao.findMatchById(req.params.matchId);
+        res.json(match);
     }
     const updateMatch = async (req, res) => {
         const {matchId} = req.params;
