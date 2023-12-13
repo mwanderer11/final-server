@@ -6,7 +6,7 @@ function playerRoutes(app) {
         res.json(user);
     }
     const deletePlayer = async (req, res) => {
-        const status = await dao.deletePlayer(req.params._id);
+        const status = await dao.deletePlayer(req.params.playerId);
         res.json(status);
     }
     const findAllPlayers = async (req, res) => {
@@ -14,12 +14,12 @@ function playerRoutes(app) {
         res.json(players);
     }
     const findPlayerByName = async (req, res) => {
-        const player = await dao.findPlayerByName(req.params.name);
+        const player = await dao.findPlayerByName(req.params.playerName);
         res.json(player);
     }
 
     const findPlayerById = async (req, res) => {
-        const player = await dao.findPlayerById(req.params._id);
+        const player = await dao.findPlayerById(req.params.playerId);
         res.json(player);
     }
     const updatePlayer = async (req, res) => {
