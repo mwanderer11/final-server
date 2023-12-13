@@ -14,7 +14,7 @@ function matchRoutes(app) {
         res.json(matches);
     }
     const findMatchById = async (req, res) => {
-        const match = await dao.findMatchById(req.params.matchId);
+        const match = await dao.findMatchById(req.params);
         res.json(match);
     }
     const updateMatch = async (req, res) => {
