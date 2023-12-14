@@ -24,7 +24,6 @@ function matchRoutes(app) {
         const status = await dao.updateMatch(matchId, req.body);
         res.json(status);
     }
-
     app.post("/api/matches", createMatch);
     app.get("/api/matches", findAllMatches);
     app.get("/api/matches/:matchId", findMatchById);
