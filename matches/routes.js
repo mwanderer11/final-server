@@ -28,5 +28,4 @@ function matchRoutes(app) {
     app.get("/api/matches/:matchId", findMatchById);
     app.put("/api/matches/:matchId", updateMatch);
     app.delete("/api/matches/:matchId", deleteMatch);
-    app.put("/api/matches", generateMatches);
 } export default matchRoutes;
