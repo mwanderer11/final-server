@@ -1,7 +1,7 @@
 import express from 'express'
+import session from "express-session"
 import "dotenv/config";
 import cors from "cors";
-import session from "express-session"
 import mongoose from "mongoose";
 
 import playerRoutes from "./Players/routes.js"
@@ -20,7 +20,6 @@ const sessionOptions = {
     resave: false,
     saveUninitialized: false,
 };
-
 if (process.env.NODE_ENV !== "development") {
     sessionOptions.proxy = true;
     sessionOptions.cookie = {
