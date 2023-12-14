@@ -35,6 +35,7 @@ function UserRoutes(app) {
         req.session['currentUser'] = currentUser;
         res.json(currentUser);
     };
+
     const signout = (req, res) => {
         req.session.destroy();
         res.json(200);
@@ -43,6 +44,7 @@ function UserRoutes(app) {
     const account = async (req, res) => {
         res.json(req.session['currentUser']);
     };
+
     const updateUser = async (req, res) => {
         const { userId } = req.params;
         const status = await dao.updateUser(userId, req.body);
