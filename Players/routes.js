@@ -13,10 +13,6 @@ function playerRoutes(app) {
         const players = await dao.findAllPlayers();
         res.json(players);
     }
-    const findPlayerByName = async (req, res) => {
-        const player = await dao.findPlayerByName(req.params.playerName);
-        res.json(player);
-    }
 
     const findPlayerById = async (req, res) => {
         const player = await dao.findPlayerById(req.params.id);
@@ -32,5 +28,4 @@ function playerRoutes(app) {
     app.get("/api/players/:id", findPlayerById);
     app.put("/api/player/:playerId", updatePlayer);
     app.delete("/api/players/:id", deletePlayer);
-    app.get("/api/players/:playerName", findPlayerByName);
 } export default playerRoutes;
