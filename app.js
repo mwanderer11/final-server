@@ -2,8 +2,8 @@ import express from 'express'
 import "dotenv/config";
 import cors from "cors";
 import session from "express-session"
-import "dotenv/config";
 import mongoose from "mongoose";
+
 import playerRoutes from "./Players/routes.js"
 import UserRoutes from "./Users/routes.js";
 import matchRoutes from "./matches/routes.js";
@@ -20,15 +20,15 @@ const sessionOptions = {
     resave: false,
     saveUninitialized: false,
 };
-app.use(session(sessionOptions));
 
-if (process.env.NODE_ENV === "development") {
+if (process.env.NODE_ENV !== "development") {
     sessionOptions.proxy = true;
     sessionOptions.cookie = {
         sameSite: "none",
         secure: true,
     };
 }
+app.use(session(sessionOptions));
 app.use(express.json());
 playerRoutes(app);
 UserRoutes(app);
