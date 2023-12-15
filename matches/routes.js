@@ -2,8 +2,8 @@ import * as dao from "./dao.js"
 
 function matchRoutes(app) {
     const createMatch = async (req, res) => {
-        const user = await dao.createMatch(req.body);
-        res.json(user);
+        const match = await dao.createMatch(req.body);
+        res.json(match);
     }
     const deleteMatch = async (req, res) => {
         const {matchId} = req.params;
